@@ -1,0 +1,73 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "alignment": "left",
+        "segments": [
+          {
+            "background": "#00eeff",
+            "foreground": "#000000",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+            "trailing_diamond": "\ue0b4",
+            "type": "os"
+          },
+          {
+            "background": "#ffffff",
+            "foreground": "#000000",
+            "powerline_symbol": "\ue0b4",
+            "properties": {
+              "style": "full"
+            },
+            "style": "powerline",
+            "template": " \uf0e7 ",
+            "type": "root"
+          },
+          {
+            "background": "#0000ff",
+            "foreground": "#ffffff",
+            "powerline_symbol": "\ue0b4",
+            "properties": {
+              "style": "full"
+            },
+            "style": "powerline",
+            "template": " {{ .Path }} ",
+            "type": "path"
+          },
+          {
+            "background": "#2600ff",
+            "foreground": "#000000",
+            "powerline_symbol": "\ue0b4",
+            "style": "powerline",
+            "template": " {{ .HEAD }} ",
+            "type": "git"
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "right",
+        "segments": [
+          {
+            "background": "#0022ff",
+            "foreground": "#000000",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} <transparent>\ue0b6</>",
+            "type": "python"
+          },
+          {
+            "background": "#7FD5EA",
+            "foreground": "#ffffff",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} <transparent>\ue0b6</>",
+            "type": "go"
+          }
+        ],
+        "type": "prompt"
+      }
+    ],
+    "version": 2
+  }
